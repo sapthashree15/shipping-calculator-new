@@ -1,0 +1,101 @@
+/* styles.css */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #aaced4;
+  }
+
+  .shipping-icon {
+    display: block;
+    margin: 0 auto 20px; /* Centers the image and adds margin at the bottom */
+    max-width: 200px; /* Adjust the size as needed */
+    margin-left: 600px;
+}
+  
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #18848b;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 80px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 10px;
+    margin-left: 80px;
+  }
+  
+  input[type="text"],
+  input[type="password"],
+  input[type="number"] {
+    display: block;
+    width: 30%;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    size: 10;
+    margin-left: 500px;
+    text-align: center;
+  }
+  
+  button {
+    width: 20%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    size: 10;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 580px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* LoginForm styles */
+  .login-form-container {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+  
+  /* ShippingCalculator styles */
+  .shipping-calculator-container {
+    margin-top: 20px;
+  }
+  
+  /* Chart styles */
+  .chart-container {
+    margin-top: 20px;
+  }
+  
+  .chart-container table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .chart-container th,
+  .chart-container td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: center;
+    size: 10px;
+  }
+  
+  .chart-container th {
+    background-color: #f2f2f2;
+  }
+  
