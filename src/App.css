@@ -75,3 +75,33 @@ body {
     font-weight: bold;
     color: #007bff;
   }
+
+  /* Add this CSS to your styles.css file or equivalent */
+/* Add this CSS to your styles.css file or equivalent */
+.chart-container table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.chart-container th,
+.chart-container td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.chart-container th {
+  background-color: #f2f2f2;
+}
+
+.chart-container td:first-child {
+  /* Add extra padding to the left of the first column to create space for the weight unit */
+  padding-left: 20px;
+}
+
+/* Add styling for the shipping rate column */
+.chart-container td:nth-child(3) {
+  font-weight: bold;
+  color: #007bff; /* Blue color for the shipping rate text */
+}
+

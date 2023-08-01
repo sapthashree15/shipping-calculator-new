@@ -1,7 +1,7 @@
 import React from 'react';
 import '../styles.css'; // Import the styles.css file
 
-const Chart = ({ freightRates, currency }) => {
+const Chart = ({ freightRates }) => {
   return (
     <div className="chart-container"> {/* Add the class name for container */}
       <h2>Shipping Rate Chart</h2>
@@ -18,7 +18,8 @@ const Chart = ({ freightRates, currency }) => {
             <tr key={index}>
               <td>{rate.packageSize}</td>
               <td>{rate.destination}</td>
-              <td>{currency === 'usd' ? `$${rate.rate.toFixed(2)}` : `₹${rate.rate.toFixed(2)}`}</td>
+              {/* Display rates with the appropriate currency symbol */}
+              <td>{`${rate.currency === 'usd' ? '$' : '₹'}${rate.rate.toFixed(2)}`}</td>
             </tr>
           ))}
         </tbody>
