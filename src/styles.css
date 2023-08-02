@@ -6,13 +6,55 @@ body {
     margin: 0;
     padding: 0;
     background-color: #aaced4;
+    border: solid black;
   }
+
+ /* .pweight{
+  max-width: fit-content;
+
+ } */
+
+ /* ... (existing styles) */
+
+.package-weight-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative; /* Set the container to have relative positioning */
+}
+
+.package-size-input {
+  width: 100px; /* Adjust the width as needed */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+}
+
+.package-weight-container select {
+  position: absolute; /* Set the select to have absolute positioning */
+  right: 0; /* Position the select to the right inside the container */
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 0 4px 4px 0;
+  background-color: #f2f2f2;
+  color: #333;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+
+ .city-state-dropdown{
+  width: 425px;
+  align-items: center;
+  margin-left: 500px;
+  text-align: center;
+ }
 
   .shipping-icon {
     display: block;
-    margin: 0 auto 20px; /* Centers the image and adds margin at the bottom */
-    max-width: 200px; /* Adjust the size as needed */
-    margin-left: 600px;
+    margin: 0 auto 10px; /* Centers the image and adds margin at the bottom */
+    max-width: 250px; /* Adjust the size as needed */
+    align-items: center;
 }
   
   .container {
@@ -28,6 +70,7 @@ body {
     text-align: center;
     margin-bottom: 20px;
     margin-left: 80px;
+    margin-top: 10px;
   }
   
   h2 {
@@ -60,6 +103,7 @@ body {
     border-radius: 5px;
     cursor: pointer;
     margin-left: 580px;
+    align-items: center;
   }
   
   button:hover {
@@ -75,6 +119,7 @@ body {
   /* ShippingCalculator styles */
   .shipping-calculator-container {
     margin-top: 20px;
+    align-items: center;
   }
   
   /* Chart styles */
