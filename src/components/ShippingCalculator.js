@@ -31,7 +31,7 @@ const ShippingCalculator = () => {
     setPackageSize('');
     // Retain the previously selected city name
     // while clearing the packageSize and rate fields
-    setDestination(destination);
+    setDestination('null');
     setRate('');
   };
 
@@ -53,12 +53,12 @@ const ShippingCalculator = () => {
                 onChange={(e) => setPackageSize(e.target.value)}
                 className="package-size-input" // Add the class to the input
               />
-              <select
+              <select className='select'
                 value={packageWeightUnit}
                 onChange={(e) => setPackageWeightUnit(e.target.value)}
               >
-                <option value="kg">kg</option>
-                <option value="lb">lb</option>
+                <option value="kg">KG</option>
+                <option value="lb">LB</option>
               </select>
             </div>
             <div className="city-state-dropdown">
@@ -69,22 +69,29 @@ const ShippingCalculator = () => {
                 placeholder="Select City and State"
               />
             </div>
+            <br/>
             <div className="shipping-rate-input">
-              <input
-                type="text"
-                placeholder="Shipping Rate"
-                value={rate}
-                onChange={(e) => setRate(e.target.value)}
-              />
-              <select value={packageWeightUnit === 'kg' ? 'inr' : 'usd'} onChange={(e) => setPackageWeightUnit(e.target.value === 'inr' ? 'kg' : 'lb')}>
-                <option value="inr">INR</option>
-                <option value="usd">USD</option>
-              </select>
-            </div>
-            <button onClick={addFreightRate}>Add Rate</button>
+            <input
+              type="text"
+              placeholder="Shipping Rate"
+              value={rate}
+              onChange={(e) => setRate(e.target.value)}
+            />
+            <select
+              className="select2"
+              value={packageWeightUnit === 'kg' ? 'inr' : 'usd'}
+              onChange={(e) => setPackageWeightUnit(e.target.value === 'inr' ? 'kg' : 'lb')}
+            >
+              <option value="inr" className="inr-option">INR</option>
+              <option value="usd" className="usd-option">USD</option>
+            </select>
+          </div>
+            <button type="button" onClick={addFreightRate}>
+                Add Rate
+              </button>
             </form>
           </div>
-          <Chart freightRates={freightRates} packageWeightUnit={packageWeightUnit} />
+          <Chart freightRates={freightRates} />
         </div>
       )}
     </div>

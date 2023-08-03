@@ -6,21 +6,43 @@ body {
     margin: 0;
     padding: 0;
     background-color: #aaced4;
-    border: solid black;
+    
   }
 
- /* .pweight{
-  max-width: fit-content;
+  .select {
+  width: 60px;
+  height: 35px;
+  text-align: center;
+  margin-right: 360px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 5px;
+  border-color: #fff;
+  margin-left: 10px;
+  }
 
- } */
 
- /* ... (existing styles) */
+  .select2 {
+  width: 60px;
+  height: 35px;
+  text-align: center;
+  margin-right: 360px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative;
+  border-radius: 5px;
+  border-color: #fff;
+  }
 
 .package-weight-container {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
   position: relative; /* Set the container to have relative positioning */
+
 }
 
 .package-size-input {
@@ -30,29 +52,21 @@ body {
   border-radius: 4px 0 0 4px;
 }
 
-.package-weight-container select {
-  position: absolute; /* Set the select to have absolute positioning */
-  right: 0; /* Position the select to the right inside the container */
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 0 4px 4px 0;
-  background-color: #f2f2f2;
-  color: #333;
-  font-size: 14px;
-  cursor: pointer;
-}
-
 
  .city-state-dropdown{
   width: 425px;
   align-items: center;
+  flex-direction: row;
+  justify-content: flex-start;
   margin-left: 500px;
   text-align: center;
+
+
  }
 
   .shipping-icon {
     display: block;
-    margin: 0 auto 10px; /* Centers the image and adds margin at the bottom */
+    margin-left: 570px;
     max-width: 250px; /* Adjust the size as needed */
     align-items: center;
 }
@@ -144,39 +158,38 @@ body {
     background-color: #f2f2f2;
   }
 
-  /* ShippingCalculator.css */
-  
-  .package-size-input {
-    width: 50%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px 0 0 4px;
-  }
-  
-  /* styles.css */
+  .shipping-rate-input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  position: relative; 
 
-/* Add styles for the package weight container */
-.package-weight-container {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
   }
   
-  .package-weight-container select {
-    margin-left: 10px;
-    padding: 5px;
-    font-size: 14px;
+  .shipping-rate-input input {
+    flex: 1;
+    
   }
   
-  /* Add additional styles for the dropdown */
-  select {
-    background-color: #f2f2f2;
-    color: #333;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding: 5px;
-    font-size: 14px;
-    cursor: pointer;
+  .shipping-rate-input select {
+    margin-left: 10px; 
   }
+  
+  /* Style the "INR" option */
+  .select2 option.inr-option {
+    color: green;
+    /* Add any other specific styles for the "INR" option here */
+  }
+  
+  /* Style the "USD" option */
+  .select2 option.usd-option {
+    color: blue;
+    /* Add any other specific styles for the "USD" option here */
+  }
+  
+  
+  
+
+  
   
   
