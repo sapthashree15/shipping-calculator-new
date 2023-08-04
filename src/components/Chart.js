@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Chart = ({ freightRates }) => {
+const Chart = ({ freightRates, packageWeightUnit }) => {
   return (
     <div className="chart-container">
       <h2>Shipping Rate Chart</h2>
       <table>
         <thead>
           <tr>
-            <th>Package Weight </th>
+            <th>Package Weight</th>
             <th>Destination</th>
             <th>Shipping Rate</th>
           </tr>
@@ -15,7 +15,7 @@ const Chart = ({ freightRates }) => {
         <tbody>
           {freightRates.map((rate, index) => (
             <tr key={index}>
-              <td>{rate.packageSize}</td>
+              <td>{rate.packageSize} ({rate.packageWeightUnit})</td>
               <td>{rate.destination}</td>
               <td>{`${rate.currency === 'usd' ? '$' : '₹'}${rate.rate.toFixed(2)}`}</td>
             </tr>

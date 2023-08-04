@@ -26,7 +26,7 @@ const ShippingCalculator = () => {
 
     const currency = packageWeightUnit === 'kg' ? 'inr' : 'usd';
 
-    const newRate = { packageSize, destination: destination.label, rate: parseFloat(rate), currency };
+    const newRate = { packageSize, destination: destination.label, rate: parseFloat(rate), currency, packageWeightUnit};
     setFreightRates([...freightRates, newRate]);
 
     setPackageSize('');
@@ -108,7 +108,7 @@ const ShippingCalculator = () => {
               </button>
             </form>
           </div>
-          <Chart freightRates={freightRates} />
+          <Chart freightRates={freightRates} packageWeightUnit={packageWeightUnit} />
         </div>
       )}
     </div>
